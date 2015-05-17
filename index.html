@@ -7,8 +7,12 @@
     <script src="controller.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body ng-controller="NameCtrl">
-    <ul>
-      <li ng-repeat="name in names">{{name}}</li>
-    </ul>
+    <form ng-submit="addName()" action="" method="post">
+      <input ng-model="enteredName" type=text" name="" id="" value="" />
+      <input type="submit" name="" id="" value="add" />
+      <p ng-repeat="name in names">{{name}}
+      <a ng-click="removeName(name)" href="#">Remove</a>
+      </p>
+    </form>
   </body>
 </html>
